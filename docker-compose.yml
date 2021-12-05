@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  redis-server:
+    image: 'redis'
+    ports:
+      - "6379:6379"
+
+  go-app:
+    build: .
+    ports:
+      - "8001:8001"
